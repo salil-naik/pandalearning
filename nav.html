@@ -1,0 +1,252 @@
+
+<link href="product.css" rel="stylesheet" type="text/css"/>
+<!--link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans|Raleway:800|Cookie|Varela+Round" rel="stylesheet"-->
+<link href="https://fonts.googleapis.com/css?family=Roboto|Lato:900" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ee3323">
+
+<style>
+/*only for first navigation*/
+.listblack , img.lblack{display:none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    var scroll_pos = 0;
+    $(window).scroll(function () {
+        scroll_pos = $(this).scrollTop();
+        if (scroll_pos > 130) {
+            $('#navbar').css('background-color', 'white');
+            $('#navbar').css('color', '#48af4b');
+            $('.w').css('display', 'none');
+            $('.b').css('display', 'block');
+            $("#name").css('display', 'block');
+            $("#name").css('color', 'black');
+
+            /*$("#name").css('animation-name', 'ease-in');
+            $("#name").css('animation-duration', '1s');*/
+            $(".onblack").css('display', 'none');
+            $(".onwhite").css('display', 'block');
+            $(".ticket").css('border-color','black');
+            $(".lblack").css('display', 'block');
+            $(".lwhite").css('display', 'none');
+            $(".listblack").css('display', 'block');
+            $(".listwhite").css('display', 'none');
+            /*$("#navbar").css('animation-name', 'navcolor');
+            $("#navbar").css('animation-duration', '1s');*/
+        } else {
+            $('#navbar').css('background-color', 'transparent');
+            $('#navbar').css('color', 'white');
+            $('.w').css('display', 'block');
+            $('.b').css('display', 'none');
+            $("#name").css('display', 'block');
+            $("#name").css('color', 'white');
+            /*$("#name").css('animation-name', 'ease-out');
+            $("#name").css('animation-duration', '1s');*/
+            $(".onblack").css('display', 'block');
+            $(".onwhite").css('display', 'none');
+            $(".ticket").css('border-color','white');
+            $(".lblack").css('display', 'none');
+            $(".lwhite").css('display', 'block');
+            $(".listblack").css('display', 'none');
+            $(".listwhite").css('display', 'block');
+            /*$("#navbar").css('animation-name', 'navcolordown');
+            $("#navbar").css('animation-duration', '1s');*/
+        }
+        console.log(scroll_pos);
+    });
+});
+</script>
+
+</head>
+
+<body>
+<header>
+<nav class="p_nav" id="navbar" style="color:white;background-color:transparent">
+  <ul class="width-7">
+    <li class="logo listwhite"><a href="index.php"><img src="images/logo3.png" class="lwhite"></a></li>
+    <li class="logo listblack" style="display:none;"><a href="index.php"><img src="images/logo.png" class="lblack"></a></li>
+    <!--li class="logo onwhite"><img src="images/logoOnWhite1.png" style="height:50px;width:auto;margin-top:15px;"></li-->
+    <li style="line-height:25px;font-size:16px;text-align:left;padding:15px 0px;color:white;" id="name"><span style="color:#48af4b;font-weight:bold">CATEGORIES</span><br><span>Learnign Paths</span></li>
+  </ul>
+
+
+  <ul class="width-5 desktopview" >
+
+    <li class="width-3">
+      Jobs
+    </li>
+
+    <li class="width-3 talk">
+      Build
+      <ul class="talksublist">
+        <img src="images/iconUp.png" class="up b">
+        <img src="images/iconUpw.png" class="up w">
+        <a href="">
+          <li>
+            <div class="pro_title">
+              Build a website for school
+            </div>
+
+            <div class="pro_tech">
+              <b>Technologies:</b> HTML , CSS, JS
+            </div>
+          </li>
+        </a>
+
+
+        <a href="">
+          <li>
+            <div class="pro_title">
+              Build an e-learning website
+            </div>
+
+            <div class="pro_tech">
+              <b>Technologies:</b> HTML , CSS, JS, PHP
+            </div>
+          </li>
+        </a>
+
+
+        <a href="">
+          <li>
+            <div class="pro_title">
+              Build a music app
+            </div>
+
+            <div class="pro_tech">
+              <b>Technologies:</b> Kotlin, Java, or HTML, CSS , JS
+            </div>
+          </li>
+        </a>
+
+      </ul>
+    </li>
+
+
+    <li class="width-3 abt">
+      Quiz
+      <ul class="aboutsublist">
+        <img src="images/iconUp.png" class="up b">
+        <img src="images/iconUpw.png" class="up w">
+
+        <a href="">
+          <li>
+            <div class="pro_title">
+              HTML Quiz
+            </div>
+
+            <div class="pro_tech">
+              <b>#fact: </b>Html is the most important language in web designing
+            </div>
+          </li>
+        </a>
+
+        <a href="">
+          <li>
+            <div class="pro_title">
+              CSS Quiz
+            </div>
+
+            <div class="pro_tech">
+              <b>#fact: </b>There are multiple CCS libraries
+            </div>
+          </li>
+        </a>
+
+        <a href="">
+          <li>
+            <div class="pro_title">
+              FrontEnd Quiz
+            </div>
+
+            <div class="pro_tech">
+              <b>#fact: </b>The increase for FrontEnd Developers are suspected to be increased by 18% by 2020
+            </div>
+          </li>
+        </a>
+
+
+      </ul>
+    </li>
+
+    <li class="width-3"><div class="ticket" style="border-color:black;">Login</div></li>
+  </ul>
+
+  <img src="images/menub.png" onclick="drpdwn()" id="p_menu_button" class="menu"/>
+
+  <!--div class="mview" id="p_drpdwn">
+
+    <img src="images/round.png" style="position:absolute;left:0px;bottom:0px;width:40%;height:auto">
+    <div class="logo" style="position:absolute;top:0px;left:30px;"><img src="images/TEDxGECblack.png" style="height: 44px !important;width:auto;margin-top: 18px;" ></div>
+    <img src="images/close.png" onclick="drpdwn()" id="p_menu_button" class="menu"/>
+    <a href="inquilab.php" class="m_menu_1">Inquilab</a><br>
+    <a href="talks.php" class="m_menu_2">Talks</a><br>
+    <a href="#" class="m_menu_3">Past Events</a><br>
+    <a href="about.php" class="m_menu_4">About TED/TEDx</a><br>
+    <a href="team.php" class="m_menu_5">Team</a><br>
+    <a href="#" class="m_menu_6">Partners</a><br>
+    <a href="#" class="m_menu_7">Register</a><br>
+  </div-->
+</nav>
+</header>
+
+<script>
+function drpdwn()
+{
+  var x = document.getElementById('p_drpdwn')
+  var display = x.style.display;
+  var y = document.getElementById('p_menu-button');
+  if(display == 'block')
+  {
+    x.style.display = 'none';
+    y.innerHTML = '&#9776;'
+  }
+  else
+  {
+    x.style.display = 'block';
+    y.innerHTML = "&times;"
+  }
+}
+</script>
+
+
+<!--div class="music">
+    <div class="pulse" onclick="togglePlay()"><img src="images/note.png" style="height:22px;width:auto;animation:shake 5s infinite;"></div>
+    <div style="display:inline-block">Queen of the skies | Nicolai Heidlas<br><a href="https://www.hooksounds.com" target="_blank">Hooksounds</a></div>
+</div>
+
+<audio id="my_audio" src="music/jobs.mp3" loop="loop"></audio>
+
+<script>
+window.onload = function() {
+    document.getElementById("my_audio").play();
+    document.getElementById("my_audio").volume=0.2;
+}
+
+var myAudio = document.getElementById("my_audio");
+var isPlaying = false;
+
+myAudio.volume=0.2;
+
+function togglePlay() {
+  if (isPlaying) {
+    my_audio.pause()
+  } else {
+    my_audio.play();
+  }
+};
+my_audio.onplaying = function() {
+  isPlaying = true;
+};
+my_audio.onpause = function() {
+  isPlaying = false;
+};
+</script-->
+<!--Ends here-->
+
+<!--body style="height:100%;">
+  <img src="images/abtbg.jpg" style="width:100%;height:100%;">
+  <div style="height:100%;background-color:teal">
+</body-->

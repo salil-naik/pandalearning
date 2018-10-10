@@ -1,0 +1,548 @@
+60/*
+Version 1.1
+
+MIT License
+Copyright (c) 2017 Salil Naik
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*Many changes made to the original code*/
+
+html,body{height:100%;}
+
+.width-1{width:8.33%;}
+.width-2{width:16.66%;}
+.width-2-4{width:20%;}
+.width-3{width:24.5%;}
+.width-4{width:33.33%;}
+.width-5{width:41.66%;}
+.width-6{width:50%;}
+.width-7{width:58.33%;}
+.width-8{width:66.66%;}
+.width-9{width:75%;}
+.width-10{width:83.33%;}
+.width-11{width:91.66%;}
+.width-12{width:100%;}
+
+
+
+[class*="width-"]{padding:0px;
+		margin:0px;
+		float:left;
+		display:inline-block;
+				}
+
+				/* width */
+				::-webkit-scrollbar {
+				    width: 10px;
+				}
+
+				/* Track */
+				::-webkit-scrollbar-track {
+				    background: #ee3323;
+				}
+
+				/* Handle */
+				::-webkit-scrollbar-thumb {
+				    background: #555;
+				}
+
+				/* Handle on hover */
+				::-webkit-scrollbar-thumb:hover {
+				    background: #111;
+				}
+
+
+/*new*/
+[class*="fix"]{position:fixed;}
+body{margin:0px;}
+
+a{text-decoration:none;
+	color:inherit;
+	}
+
+*{box-sizing:border-box;}
+
+.p_shadow{box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .32), 0 6px 8px 0 rgba(0, 0, 0, 0.49);
+}
+.p_shadowt{box-shadow: 12px 15px 15px -10px rgba(65, 64, 66, 0.7);}
+
+.p_content{width:100%;}
+/*new*/
+/*[class*="button"]{outline:none;border:0px;background-color:#f1f1f1;padding:10px;}*/
+
+/*Navigation Starts*/
+/*new*/
+[class*="p_nav"]{width:100%;
+	height:80px;
+	z-index:10;
+	display:block;
+	color:white;
+	position: fixed;
+	top:0px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	font-family: 'Roboto', sans-serif;
+}
+
+[class*="p_nav"] ul{display:inline-block;
+	margin:0px;
+	padding:0px;
+	height: 80px;
+	background-color:inherit;
+	color:inherit;
+	float:left;
+	}
+
+[class*="p_nav"] ul li{height:inherit;
+	text-align:center;
+	list-style-type:none;
+	display:inline-block;
+	float:left;
+	background-color:inherit;
+	color:inherit;
+	font-size:22px;
+	position:relative;
+	top:0px;
+	z-index: 3;
+	padding:0px 5px;
+	cursor:pointer;
+	font-weight:200;
+}
+
+[class*="p_nav"] ul li:hover{color:;transition:0.4s;}
+
+.pro_title
+{
+	margin-top:5px;
+	font-weight: bold;
+	color:#48af4b;
+	margin-bottom:5px;
+}
+
+.pro_tech
+{
+	color:#999;
+	font-size:13px;
+	margin-bottom:5px;
+}
+/*custom*/
+/*#name{display:none;}*/
+
+[class*="sublist"] li{width:100%;
+
+      line-height: 20px !important;
+      text-align: left !important;
+      /*background-color:transparent !important;*/
+      font-size:16px !important;
+      padding:10px 15px!important;
+    /*  border-bottom:1px solid #f1f1f1;*/
+
+}
+
+
+.p_nav [class*='width'] [class*='sublist']{
+  padding:0px 0px 10px 0px;
+  height:auto;
+  border-radius:0px 0px 10px 10px;
+  background-color:white !important;
+  color:black;
+  margin:0px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 0 13px;
+	display:none;
+	position:relative;
+	top:0px;
+	left:-100%;
+	width:300%;
+
+    }
+
+.p_nav [class*='width'] [class*='sublist'] li:hover{background-color: #f1f1f1;color:#ee3323;
+}
+
+li.talk:hover ul.talksublist, li.abt:hover ul.aboutsublist{display:block;animation-name: ease-in;animation-duration: 0.6s;}
+
+
+.ticket{width:100px;height:38px;
+        border:1px solid white;
+        line-height:38px;
+        border-radius: 3px;
+				transition: color 0.5s, border 0.5s;
+       }
+
+.ticket:hover{color:#48af4b;border:1px solid #48af4b !important;}
+
+img.up{position:absolute;left:45%;top:-17px;width:25px;height:auto;}
+
+.lwhite,.lblack{height:44px !important;
+								width:auto;
+								margin-top:18px;
+								}
+
+@keyframes ease-in {
+    from {opacity: 0;}
+    to {opacity: 1}
+}
+
+@keyframes ease-out {
+    from {opacity: 1;}
+    to {opacity: 0}
+}
+
+/*@keyframes navcolor {
+	from{background-color:transparent;color:white;}
+	to {background-color:white !important;color:black !important;}
+}
+
+@keyframes navcolordown{
+	from{background-color:white;color:black;}
+	to {background-color:transparent;color:white;}
+}*/
+
+/*Ends*/
+
+
+/*Team page*/
+.cardholder{padding:20px;}
+/*.card{box-shadow: 0 2px 10px rgba(0,0,0,.2);background-color:white;}*/
+.card{box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); background-color: white;}
+.card img{width:100%;height:250px;object-fit: cover;padding:20px 20px 0px 20px;background-color:white;}
+.card .carddetails{background-color:white;padding:20px;position:relative;top:-5px;left:0px;font-family: 'Fira Sans', sans-serif;}
+.card h3{color:#ee3323;text-transform: uppercase;width:80%;}
+.card .carddetails p{font-size:16px;line-height: 25px;text-align: left;}
+.socialIcons{font-family: "Raleway", sans-serif;
+						text-align: right;
+						position:absolute;top:18px;right:23px;
+						font-size:23px;
+						color:#0073b1;
+						transition: color 0.4s;
+
+						}
+.socialIcons:hover{color:#ee3323;}
+
+.quote{position:absolute;
+				top:200px;
+				right:50px;
+				background-color:white;color:black;
+				width:600px;height:350px;
+				padding:30px;}
+
+/*Ends*/
+
+/*Index page*/
+/*img.musicButton
+{
+	position:relative;
+	top:13px;
+	width:27px;
+	margin:0px 10px;
+	border-radius: 50%;
+	padding:5px;
+	animation: pikpik 1.5s infinite;
+
+}
+
+
+@keyframes pikpik {
+	from{border:1px solid white;}
+	to {border:1px solid #ee3323;}
+}*/
+
+.music
+{
+	position:fixed;
+	right:0px;bottom:0px;
+	text-align:right;
+	background-color:#e5c2c22e;
+	padding:8px 10px;
+	font-size:13px;
+	color:black;
+	font-family: "Open Sans", sans-serif;
+	z-index: 4;
+}
+
+.pulse
+{
+	background-color:#ee3323;
+	border-radius:50%;
+	height:34px;
+	width:34px;
+	display:inline-block;
+	padding-top:6px;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	transition:background-color 0.5s;
+
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/*
+.pulse::before
+{
+	content:'';
+	background-color:#ee332369;
+	border-radius:50%;
+	height:44px;
+	width:44px;
+	display:inline-block
+	position:relative;
+	top:0px;left:0px;
+}
+.pulse::after
+{
+	content:'';
+	background-color:#ee3323;
+	border-radius:50%;
+	height:34px;
+	width:34px;
+	display:inline-block;
+	text-align:center;
+	cursor:pointer;
+	position:relative;
+	top:0px;left:0px;
+}*/
+
+.pulse:hover{background-color:black;}
+
+
+/*About page*/
+.aboutTEDx{font-family:"Open Sans", sans-serif;
+					font-weight:800;background-image:url(images/abtbg.jpg);
+					background-size:cover;
+					background-attachment:fixed;
+				/*	opacity:0;
+					animation-name:ease-in;
+					animation-duration: 4s;
+				animation-fill-mode: forwards;*/}
+
+
+/*For Logo*/
+[class*="p_nav"] ul li.logo{font-size:35px;text-align: center;padding:0px 30px;}
+
+/*put width according to the number of list items*/
+/*End of Navigation*/
+[class*="p_part"]{width:100%;min-height:500px;padding:10px;float:left;}
+
+
+/*main content*/
+[class*="main"]{display:block;
+		width:100%;
+		}
+
+.main{width:100%;}
+
+footer{font-family: 'Varela Round', sans-serif;}
+footer .links{background-color: #eee;color:black;}
+/*footer .links{background-color: #ee3323;color:white;}*/
+/*footer .abtx{background-color: #0F1A20;color:white;}*/
+footer .abtx{background-color: #48af4b; color:white;}
+/*footer .abtx{background-color: #eaeaea;color:black;}*/
+
+footer .links a{transition:color 0.4s;}
+footer .links a:hover
+{
+	color:#ee3323;
+}
+footer .abtx, footer .links{
+	line-height: 25px;
+	min-height:400px;
+}
+
+footer .abtx{text-align: justify;}
+
+footer .abtx h4
+{
+	color:#fff;
+}
+
+footer .links h4
+{
+	color:#0f1a20;font-weight:800 ;text-transform: uppercase;
+}
+
+.links li{list-style-type: none;}
+
+footer h4{margin-bottom:10px;font-size:18px;}
+footer img.sm{
+						margin:15px;
+						width:17px;height:17px;
+				}
+
+div.mview{transition: display 2s;}
+
+/*responsive MOBILE VIEW*/
+@media only screen and (max-width:1024px)
+{
+
+	[class*="width"]{width:100%;float:left;}
+  .page{padding:0px 15px;}
+
+/*temp*/
+  nav ul{min-height:80px;}
+
+	/*new*/
+	#p_drpdwn{display:none;height:100%;background-color:white;transition:display 1.5s;}
+/*	#p_menu-button{display:block;color:#ee3323;}*/
+	#name{display:none !important;}
+
+	[class*="p_nav"] ul.width-5 li{background-color:white !important;color:black !important;}
+ .p_nav [class*='width'].desktopview
+	{
+		display:none;
+	}
+
+  div.mview
+	{
+		display:block;
+		width:100%;
+		height:100%;
+		background-color:white;
+		position:fixed;
+		top:0px;left:0px;
+		z-index: 11;
+		text-align: right;
+		padding-top:100px;
+
+	}
+
+	[class*="m_menu"]
+	{
+		padding:10px 30px;
+		background-color:#ee332314;
+		color:#ee3323;
+		font-weight:bold;
+		border-radius:25px;
+		margin:20px;
+		font-size:18px;
+		text-transform:uppercase;
+		line-height: 70px;
+	}
+
+
+
+	[class*="p_nav"] ul.width-5 li
+	{
+		height:60px;
+		line-height: 60px;
+		border-bottom:1px solid #f1f1f1;
+	}
+
+	.ticket{margin:11px auto;}
+	.aboutTEDx
+	{
+		height:100%;font-size:27px;padding:130px 30px;color:white;
+		text-align: left;
+	}
+
+	.aboutrest
+	{
+		padding:20px 30px 20px 28.5px;
+	}
+
+	.videoPadding
+	{
+		padding:20px;
+	}
+
+	h2.sood{font-size:25px;}
+
+	footer .abtx
+	{
+		padding:25px 20px 20px 19px;
+	}
+
+	footer .links
+	{
+		padding:25px 20px 70px 20px;
+		font-size:17.5px
+	}
+
+	.menu
+	{
+		display:block;
+	}
+}
+
+
+
+
+
+@media only screen and (min-width:1025px)
+{
+	/*new*/
+/*	#p_menu-button{display:none;color:black;}*/
+	li.mview.width-3{display:none;}
+	[class*="p_nav"] ul li
+	{
+		line-height: 80px;
+	}
+
+	.ticket{margin:21px auto;}
+
+	.aboutTEDx
+	{
+		font-size:40px;padding:180px 100px 100px 100px;color:white;
+	}
+
+	.aboutrest
+	{
+		padding:20px 100px;
+	}
+
+	.teamPadding
+	{
+		padding:50px;
+	}
+
+	.videoPadding
+	{
+		padding:40px;
+	}
+
+	h2.sood{font-size:45px;}
+
+	footer .abtx, footer .links
+	{
+		padding:25px 50px 20px 50px;
+		font-size:16px;
+	}
+
+	.menu
+	{
+		display:none;
+	}
+
+	div.mview{display:none;}
+
+}
+
+/*new*/
+/*li#p_menu-button{position:absolute;right:0px;top:0px;
+							height:70px;width:100px;background-color:transparent;
+						border:0px;font-size:30px;outline:none;color:#ee3323;
+z-index:5;}*/
+
+.menu
+{
+	position:absolute;
+	top:20px;
+	right:30px;
+	width:36px;height:36px;
+	z-index: 11;
+}
