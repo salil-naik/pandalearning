@@ -1,4 +1,4 @@
-# pandalearning
+# Learning Panda
 Hackathon 2018
 
 Team 7.5% Attendance
